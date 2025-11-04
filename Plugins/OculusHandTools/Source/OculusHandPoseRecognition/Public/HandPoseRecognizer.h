@@ -66,7 +66,7 @@ public:
 	 * @param Confidence - Confidence level from 0.0 to 1.0.
 	 * @return A boolean that indicates if a pose is currently recognized.
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Hand Pose Recognition")
 	UPARAM(DisplayName = "Pose Recognized")
 	bool GetRecognizedHandPose(int& Index, FString& Name, float& Duration, float& Error, float& Confidence);
 
@@ -76,11 +76,17 @@ public:
 		return Pose;
 	}
 
+	UFUNCTION(BlueprintCallable, Category = "Hand Pose Recognition")
+	void DecodePose();
+
+	UFUNCTION(BlueprintCallable, Category = "Hand Pose Recognition")
+	FString EncodePose();
+
 	/**
 	 * Call to log the current hand pose.
 	 * This is used to create reference poses that can then be tweaked.
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Hand Pose Recognition")
 	void LogEncodedHandPose();
 
 protected:

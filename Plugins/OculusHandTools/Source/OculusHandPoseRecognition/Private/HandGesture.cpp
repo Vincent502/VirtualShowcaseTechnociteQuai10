@@ -316,13 +316,6 @@ void FHandGesture::DumpGestureState(int GestureIndex, const UHandPoseRecognizer*
 	int Step = 0;
 	for (const FHandGestureStep& TimedPose : TimedPoses)
 	{
-		UE_LOG(LogHandPoseRecognition, Display, TEXT(" %c %d %8s[%d] %05.3f - %05.3f"),
-			CurrentStep == Step ? '>' : ' ', Step,
-			*(HandPoseRecognizer->Poses[TimedPose.PoseIndex].PoseName),
-			TimedPose.PoseIndex,
-			TimedPose.StepFirstTime,
-			TimedPose.StepLastTime);
-
 		Step++;
 	}
 }

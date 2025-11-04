@@ -55,28 +55,28 @@ public:
 	 * Call to check if you are currently selected.
 	 * @return boolean
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Interactable")
 	bool IsSelected();
 
 	/**
 	 * Optional generic user event.
 	 * The meaning, implementation and invocation is left to the user.
 	 */
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "Interactable")
 	void Interaction1();
 
 	/**
 	 * Optional generic user event.
 	 * The meaning, implementation and invocation is left to the user.
 	 */
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "Interactable")
 	void Interaction2();
 
 	/**
 	 * Optional generic user event.
 	 * The meaning, implementation and invocation is left to the user.
 	 */
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "Interactable")
 	void Interaction3();
 
 	/**
@@ -91,7 +91,7 @@ public:
 	 * You can override this method in blueprint for special cases.
 	 * @param SimulatePhysics - boolean.
 	 */
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Interactable")
 	void SetInteractablePhysicsSimulation(bool SimulatePhysics);
 
 protected:

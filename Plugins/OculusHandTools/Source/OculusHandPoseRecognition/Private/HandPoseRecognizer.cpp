@@ -171,6 +171,25 @@ bool UHandPoseRecognizer::GetRecognizedHandPose(int& Index, FString& Name, float
 	}
 }
 
+void UHandPoseRecognizer::DecodePose()
+{
+	for (int PatternIndex = 0; PatternIndex < Poses.Num(); ++PatternIndex)
+	{
+		if (!Poses[PatternIndex].Decode())
+		{
+			UE_LOG(LogHandPoseRecognition, Error, TEXT("UHandPoseRecognizer(%s) encoded pose at index %d is invalid."),
+				*GetName(),
+				PatternIndex);
+		}
+	}
+}
+
+FString UHandPoseRecognizer::EncodePose()
+{
+	Pose.Encode();
+	return Pose.CustomEncodedPose;
+}
+
 void UHandPoseRecognizer::LogEncodedHandPose()
 {
 	Pose.Encode();

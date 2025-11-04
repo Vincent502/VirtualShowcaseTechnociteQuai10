@@ -1,19 +1,18 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.0",
+	"VersionName": "1.2",
 	"FriendlyName": "OculusHandTools",
 	"Description": "",
-	"Category": "Other",
+	"Category": "VR",
 	"CreatedBy": "",
 	"CreatedByURL": "",
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
+	"EngineVersion": "5.5.0",
 	"CanContainContent": true,
-	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
-	"Installed": false,
+	"Installed": true,
 	"SupportedTargetPlatforms": [
 		"Win64",
 		"Mac",
@@ -24,7 +23,7 @@
 			"Name": "OculusHandPoseRecognition",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
-			"WhitelistPlatforms": [
+			"PlatformAllowList": [
 				"Win64",
 				"Mac",
 				"Android"
@@ -34,7 +33,7 @@
 			"Name": "OculusInteractable",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
-			"WhitelistPlatforms": [
+			"PlatformAllowList": [
 				"Win64",
 				"Mac",
 				"Android"
@@ -44,7 +43,7 @@
 			"Name": "OculusUtils",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
-			"WhitelistPlatforms": [
+			"PlatformAllowList": [
 				"Win64",
 				"Mac",
 				"Android"

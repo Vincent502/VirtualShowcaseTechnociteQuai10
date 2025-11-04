@@ -116,7 +116,7 @@ public:
 	 * @param GestureInnerDuration - Inner gesture duration.
 	 * @return A boolean that indicates if a gesture is currently recognized.
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Hand Gesture Recognition")
 	UPARAM(DisplayName = "Gesture Recognized")
 	bool GetRecognizedHandGesture(
 		EGestureConsumptionBehavior Behavior,
@@ -129,7 +129,7 @@ public:
 	 * @param Index - Index of the gesture to query.
 	 * @return Current state of gesture recognition.
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Hand Gesture Recognition")
 	UPARAM(DisplayName = "Gesture State")
 	EGestureState GetGestureRecognitionState(int Index);
 
@@ -137,15 +137,15 @@ public:
 	 * Resets the specified hand gesture by index.
 	 * @param Index - Where to store the index of the recognized gesture.
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Hand Gesture Recognition")
 	void ResetHandGesture(int& Index);
 
 	/** Resets all hand gestures. */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Hand Gesture Recognition")
 	void ResetAllHandGestures();
 
 	/** For debugging purposes: a state dump of all hand gestures. */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Hand Gesture Recognition")
 	void DumpAllGestureStates() const;
 
 private:

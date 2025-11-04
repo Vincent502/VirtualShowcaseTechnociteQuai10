@@ -9,6 +9,7 @@ LICENSE file in the root directory of this source tree.
 #include "InteractableSelector.h"
 #include "DrawDebugHelpers.h"
 #include "Kismet/GameplayStatics.h"
+#include "Runtime/Engine/Classes/Engine/World.h"
 
 namespace // local
 {
@@ -85,7 +86,7 @@ void AInteractableSelector::Tick(float DeltaTime)
 
 	if (bSelectorActivated)
 	{
-		UWorld* World = GetWorld();
+		const UWorld* World = GetWorld();
 		if (!World)
 			return;
 
@@ -114,7 +115,7 @@ void AInteractableSelector::Tick(float DeltaTime)
 		float SphereRadius = ComputeSphereRadiusForCast();
 		FCollisionShape CollisionSphere = FCollisionShape::MakeSphere(SphereRadius);
 		TArray<FHitResult> Hits;
-		World->SweepMultiByChannel(Hits, StartCast, EndCast, FQuat::Identity, InteractableTraceChannel, CollisionSphere);
+		GetWorld()->SweepMultiByChannel(Hits, StartCast, EndCast, FQuat::Identity, InteractableTraceChannel, CollisionSphere);
 
 		// Looking for the closest candidate by angle and distance.
 		AInteractable* Candidate = nullptr;
@@ -148,7 +149,7 @@ void AInteractableSelector::Tick(float DeltaTime)
 				// If there are no hits, we help by displaying the aiming actor.
 				ActivateAimingActor(true);
 
-				World->LineTraceMultiByChannel(Hits, StartCast, EndCast, ECollisionChannel::ECC_Visibility);
+				GetWorld()->LineTraceMultiByChannel(Hits, StartCast, EndCast, ECollisionChannel::ECC_Visibility);
 
 				FQuat AimingQuat = AimingActor->GetActorQuat();
 

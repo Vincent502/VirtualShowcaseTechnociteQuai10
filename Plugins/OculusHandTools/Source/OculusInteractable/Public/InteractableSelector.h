@@ -92,21 +92,21 @@ public:
 	 * Call to activate / deactivate the selector.
 	 * @param Activate - A boolean.
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Selector")
 	void ActivateSelector(bool Activate);
 
 	/**
 	 * Access to the currently selected interactable actor.
 	 * @return AInteractable or nullptr if none is selected.
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Selector")
 	AInteractable* GetSelectedInteractable();
 
 	/**
 	 * Access any non-interactable actor hit by the selector.
 	 * @return AActor or nullptr if none is selected.
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Selector")
 	AActor* GetNonInteractableHit();
 
 	/** Called every frame. */
