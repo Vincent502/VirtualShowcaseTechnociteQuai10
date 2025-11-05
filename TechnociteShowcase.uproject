@@ -10,8 +10,7 @@
 			"SupportedTargetPlatforms": [
 				"Win64",
 				"Linux",
-				"Android",
-				"VisionOS"
+				"Android"
 			]
 		},
 		{
@@ -29,8 +28,7 @@
 			"SupportedTargetPlatforms": [
 				"Win64",
 				"Linux",
-				"Android",
-				"VisionOS"
+				"Android"
 			]
 		},
 		{
@@ -50,20 +48,24 @@
 				"Win64",
 				"Android"
 			]
+		},
+		{
+			"Name": "OculusHandTools",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Mac",
+				"Android"
+			]
 		}
 	],
 	"TargetPlatforms": [
 		"Android",
-		"IOS",
-		"Linux",
-		"Mac",
 		"PS4",
 		"PS5",
-		"Windows",
 		"WindowsNoEditor",
 		"Switch",
 		"XboxOne",
-		"XSX",
-		"VisionOS"
+		"XSX"
 	]
 }
