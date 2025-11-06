@@ -10,7 +10,8 @@
 			"SupportedTargetPlatforms": [
 				"Win64",
 				"Linux",
-				"Android"
+				"Android",
+				"VisionOS"
 			]
 		},
 		{
@@ -28,12 +29,13 @@
 			"SupportedTargetPlatforms": [
 				"Win64",
 				"Linux",
-				"Android"
+				"Android",
+				"VisionOS"
 			]
 		},
 		{
 			"Name": "OculusXR",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/8313d8d7e7cf4e03a33e79eb757bccba",
 			"SupportedTargetPlatforms": [
 				"Win64",
@@ -42,30 +44,26 @@
 		},
 		{
 			"Name": "OculusInteraction",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/2372b714e0aa46ab85168aaf035e099a",
 			"SupportedTargetPlatforms": [
 				"Win64",
-				"Android"
-			]
-		},
-		{
-			"Name": "OculusHandTools",
-			"Enabled": true,
-			"SupportedTargetPlatforms": [
-				"Win64",
-				"Mac",
 				"Android"
 			]
 		}
 	],
 	"TargetPlatforms": [
 		"Android",
+		"IOS",
+		"Linux",
+		"Mac",
 		"PS4",
 		"PS5",
+		"Windows",
 		"WindowsNoEditor",
 		"Switch",
 		"XboxOne",
-		"XSX"
+		"XSX",
+		"VisionOS"
 	]
 }
