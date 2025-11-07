@@ -53,6 +53,8 @@ Plugins/**/Binaries/*
 # Builds
 Build/*
 Builds/*
+#Plugins in project files
+Plugins/**/*.uplugin
 
 #Plugins in project files
 Plugins/*/.uplugin
@@ -78,3 +80,4 @@ Plugins/**/Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 Builds
+Plugins
